@@ -14,13 +14,14 @@ function escrreverNumerosAte(ate){
     }
 }
 
-function divisiveisPor(x,y){
-    var x;
-    var y;
-
-    for(var i=x; i<=y; i++ ){
-        console.log(i)
-        }
+function divisiveisPor(de,ate){
+    for(var i= de; i<=ate; i++){
+    if(i%de===0){
+     console.log(i);   
+   
+    }
+    
+    }
 }
   
 
