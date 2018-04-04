@@ -13,6 +13,10 @@ function iniciar() {
 
   var chkTituloItalico = document.querySelector('#chkTituloItalico');
   chkTituloItalico.addEventListener('change', trocarFontDotexto);
+  
+   var chkInverterDiaMes = document.querySelector('#chkInverterDiaMes');
+  chkInverterDiaMes.addEventListener('change', mudaData);
+  
 }
 
 
@@ -103,5 +107,24 @@ function trocarBackground() {
     //e alteramos o texto do botão
     tabela.classList.add(classeBG);
     this.value = 'Background padrão';
+  }
+}
+
+function mudaData() {
+ 
+  var aux_Data_Array = document.getElementsByClassName('nascimento');  
+  var aux_data = "";
+  if(this.checked) {
+    for(var i = 1; i < aux_Data_Array .length; i++) {
+      aux_data = aux_Data_Array[i].textContent;
+      aux_Data_Array[i].textContent = aux_data.substring(3,5) + "/" + aux_data.substring(0,2) + aux_data.substring(5,10);
+    }
+    
+  }
+  else {
+    for(var i = 1; i < aux_Data_Array .length; i++) {
+      aux_data = aux_Data_Array[i].textContent;
+      aux_Data_Array[i].textContent = aux_data.substring(3,5) + "/" + aux_data.substring(0,2) + aux_data.substring(5,10);
+    }
   }
 }
